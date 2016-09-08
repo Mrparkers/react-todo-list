@@ -9,4 +9,4 @@ npm i
 npm run devserver
 ```
 
-Result will be live at http://localhost:8080/bundle
+Result will be live at localhost:8080/bundle
