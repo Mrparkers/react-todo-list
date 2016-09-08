@@ -1,12 +1,11 @@
 var path = require('path'),
     paths = {
-        context: __dirname,
         entry: path.join(__dirname, 'src', 'index.js'),
         build: path.join(__dirname, 'lib')
     };
 
 module.exports = {
-    context: paths.context,
+    devtool: 'source-map',
     entry: [paths.entry],
 
     output: {
@@ -18,12 +17,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel',
-                exclude: /node_modules/
-            },
-            {
-                test: /\.css$/,
-                loaders: ['style', 'css'],
+                loaders: ['react-hot', 'babel'],
                 exclude: /node_modules/
             }
         ]
